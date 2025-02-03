@@ -27,3 +27,14 @@ function mostrarLista() {
         listaAmigos.innerHTML += `<li>${amigo}</li>`;
     });
 }
+
+
+function sortearAmigo() {
+    if (listadoAmigos.length == 0) {
+        alert('No hay amigos por sortear. Ingresa algunos nombres')
+    } else {
+        let indiceAleatorio = Math.floor(Math.random()*listadoAmigos.length);
+        let amigoSorteado = listadoAmigos[indiceAleatorio]
+        document.querySelector('#resultado').innerHTML = 'El amigo sorteado fue ' + amigoSorteado;
+    }
+}
